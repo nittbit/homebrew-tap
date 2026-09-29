@@ -5,8 +5,7 @@ Homebrew formulae for [UniCam Hub](https://unicam.app).
 ## Install
 
 ```sh
-brew tap nittbit/tap
-brew install unicam-hub
+brew install nittbit/tap/unicam-hub
 ```
 
 Start the hub daemon as a background service:

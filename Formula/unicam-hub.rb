@@ -7,6 +7,11 @@ class UnicamHub < Formula
   homepage "https://unicam.app"
   version "0.9.0"
 
+  # Keep @rpath dylib IDs. Otherwise Homebrew rewrites them to absolute paths and
+  # ad-hoc re-signs each dylib, which breaks the .app bundle's Developer ID seal;
+  # Gatekeeper then rejects the app as damaged and offers to move it to the Trash.
+  preserve_rpath
+
   on_macos do
     # Apple Silicon only; Intel Macs are not supported.
     depends_on arch: :arm64
