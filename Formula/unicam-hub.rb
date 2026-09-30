@@ -44,7 +44,7 @@ class UnicamHub < Formula
     else
       # RUNPATH only covers direct deps; the binary, ffmpeg and ffprobe all need LD_LIBRARY_PATH.
       libexec.install "bin", "lib"
-      bin.write_env_script libexec/"bin/unicam-hub", LD_LIBRARY_PATH: libexec/"lib"
+      (bin/"unicam-hub").write_env_script libexec/"bin/unicam-hub", LD_LIBRARY_PATH: libexec/"lib"
     end
     bin.install_symlink "unicam-hub" => "unicam"
   end
