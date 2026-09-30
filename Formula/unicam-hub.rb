@@ -1,11 +1,11 @@
 # Rendered by .github/workflows/go.yml on every stable release and pushed to
 # nittbit/homebrew-tap as Formula/unicam-hub.rb.
-# Placeholders: 0.9.0, baaf710781cf2e3b5a877dd8277e9bb299cd234a1d95dbdad2f2dfb85df89a08, b3eb026a6ab362e1257a1395478d8a736c885a4e2f64f6ffc839e15811eef307,
-#               b7adf4d7d9e440d372f1e5cae8547e354567441794f193c3b5979c7152dfea7f
+# Placeholders: 0.9.1, b55e3bf0dd83301f756379d76553d4c901249eff17086960519b0cc24cbac327, 555580690464ff8e0c398ff52f86a18e562d5a907d190cdad077ff102dafa653,
+#               e2edeacfe2b12faa5b28e804241260cb140b17c3f64b268547248a22ee694d47
 class UnicamHub < Formula
   desc "Video recording hub daemon and CLI for IP cameras and RTSP streams"
   homepage "https://unicam.app"
-  version "0.9.0"
+  version "0.9.1"
 
   # Keep @rpath dylib IDs. Otherwise Homebrew rewrites them to absolute paths and
   # ad-hoc re-signs each dylib, which breaks the .app bundle's Developer ID seal;
@@ -17,19 +17,19 @@ class UnicamHub < Formula
     depends_on arch: :arm64
 
     on_arm do
-      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.0/unicam-hub_0.9.0_macos-arm64.tar.gz"
-      sha256 "baaf710781cf2e3b5a877dd8277e9bb299cd234a1d95dbdad2f2dfb85df89a08"
+      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.1/unicam-hub_0.9.1_macos-arm64.tar.gz"
+      sha256 "b55e3bf0dd83301f756379d76553d4c901249eff17086960519b0cc24cbac327"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.0/unicam-hub_0.9.0_linux-arm64.tar.gz"
-      sha256 "b7adf4d7d9e440d372f1e5cae8547e354567441794f193c3b5979c7152dfea7f"
+      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.1/unicam-hub_0.9.1_linux-arm64.tar.gz"
+      sha256 "e2edeacfe2b12faa5b28e804241260cb140b17c3f64b268547248a22ee694d47"
     end
     on_intel do
-      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.0/unicam-hub_0.9.0_linux-amd64.tar.gz"
-      sha256 "b3eb026a6ab362e1257a1395478d8a736c885a4e2f64f6ffc839e15811eef307"
+      url "https://github.com/nittbit/unicam-releases/releases/download/v0.9.1/unicam-hub_0.9.1_linux-amd64.tar.gz"
+      sha256 "555580690464ff8e0c398ff52f86a18e562d5a907d190cdad077ff102dafa653"
     end
   end
 
